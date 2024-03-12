@@ -3,6 +3,15 @@ This is my portfolio site built with [Next.js](https://nextjs.org), [TailwindCSS
 
 It is currently a simple portfolio site with a project showcase and a blog posts showcase. I plan on making it a complete blogfolio in the future but the blog part is WIP as of now.
 
+## Install and Run
+```
+npm install
+
+npx contentlayer build
+
+npm run dev
+```
+
 ## Screenshots
 **Home Page**
 

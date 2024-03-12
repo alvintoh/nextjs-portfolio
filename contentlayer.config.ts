@@ -1,7 +1,7 @@
 import {
   defineDocumentType,
   defineNestedType,
-  makeSource,
+  makeSource
 } from "contentlayer/source-files";
 
 import rehypeSlug from "rehype-slug";
