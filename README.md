@@ -7,8 +7,6 @@ It is currently a simple portfolio site with a project showcase and a blog posts
 ```
 npm install
 
-npx contentlayer build
-
 npm run dev
 ```
 
