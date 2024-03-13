@@ -60,7 +60,7 @@ query($username: String!, $page: Int!) {
         posts.push(...data.user.publication.posts);
       }
     } catch (error) {
-      console.error(error);
+      console.error(error.response.data.errors);
       return;
     }
   }
