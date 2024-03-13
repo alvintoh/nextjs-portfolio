@@ -31,32 +31,37 @@ query($username: String!, $page: Int!) {
   let didNotGetData = true;
 
   for (let page = 0; didNotGetData; page++) {
-    const res = await axios.post(
-      HASHNODE_API_URL,
-      JSON.stringify({
-        query,
-        variables: {
-          username: HASHNODE_USERNAME,
-          page,
-        },
-      }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
+    try {
+      const res = await axios.post(
+        HASHNODE_API_URL,
+        JSON.stringify({
+          query,
+          variables: {
+            username: HASHNODE_USERNAME,
+            page,
+          },
+        }),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const {
+        data: { data },
+      } = res;
+
+      if (data.user.publication.posts.length === 0) {
+        domain = data.user.publicationDomain;
+        didNotGetData = false;
+        break;
+      } else {
+        posts.push(...data.user.publication.posts);
       }
-    );
-
-    const {
-      data: { data },
-    } = res;
-
-    if (data.user.publication.posts.length === 0) {
-      domain = data.user.publicationDomain;
-      didNotGetData = false;
-      break;
-    } else {
-      posts.push(...data.user.publication.posts);
+    } catch (error) {
+      console.error(error);
+      return;
     }
   }
 
