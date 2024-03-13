@@ -34,12 +34,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <DefaultSeo {...SEO} />
         <SocialProfileJsonLd
           type="Person"
-          name="Anish De"
-          url="https://anishde.dev/"
-          sameAs={[
-            "https://twitter.com/AnishDe12020",
-            "https://www.youtube.com/anishtechtutorials",
-          ]}
+          name="Alvin Toh"
+          url="https://www.linkedin.com/in/alvintohyz"
+          sameAs={["https://github.com/alvintoh"]}
         />
         {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
           process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
@@ -53,7 +50,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
           <CustomToaster />
           {isEnabled && (
-            <div className="absolute top-0 left-0 right-0">
+            <div className="absolute left-0 right-0 top-0">
               <div className="absolute left-8 top-16 -z-10 overflow-visible opacity-20">
                 <div className="circle-1 -z-10 h-[400px] w-[700px] rounded-full bg-red-700 mix-blend-multiply blur-[128px]" />
               </div>

@@ -1,6 +1,6 @@
 {
-  "name": "portfolio-svelte",
-  "version": "0.0.1",
+  "name": "nextjs-portfolio",
+  "version": "1.0.0",
   "license": "GPL-3.0",
   "scripts": {
     "prepare": "husky install",
@@ -14,6 +14,12 @@
     "format:fix": "prettier --write \"{components,data,pages,styles,utils,layouts}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}\"",
     "types:check": "tsc --pretty --noEmit",
     "gen:hashnode": "ts-node scripts/gen-hashnode-data.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format && npm run types:check",
+      "pre-push": "npm test"
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
@@ -73,5 +79,6 @@
     "sharp": "^0.28.3",
     "shiki": "^0.10.1",
     "zustand": "^4.0.0-rc.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

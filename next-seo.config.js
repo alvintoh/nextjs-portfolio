@@ -1,33 +1,33 @@
 const defaultSEOConfig = {
-  title: "Anish De | Fullstack Developer",
+  title: "Alvin Toh | Fullstack Developer",
   description:
-    "High Schooler • Fullstack Web Developer • Web3 Enthusiast • Blogger • Tech Enthusiast",
-  cannonical: "https://anishde.dev/",
+    "Full Stack Developer • Creative Problem Solver • Lifelong Learner • Tech Enthusiast",
+  cannonical: "https://www.linkedin.com/in/alvintohyz",
   openGraph: {
     type: "website",
-    url: "https://anishde.dev/",
-    site_name: "Anish De",
-    title: "Anish De | Fullstack Developer",
+    url: "https://www.linkedin.com/in/alvintohyz",
+    site_name: "Alvin Toh",
+    title: "Alvin Toh | Full Stack Developer",
     description:
-      "High Schooler • Fullstack Web Developer • Web3 Enthusiast • Blogger • Tech Enthusiast",
+      "Full Stack Developer • Creative Problem Solver • Lifelong Learner • Tech Enthusiast",
     images: [
       {
-        url: "https://res.cloudinary.com/anishde12020/image/upload/v1654360780/Blogfolio/og.png",
+        url: "https://media.licdn.com/dms/image/C4E03AQGS-P-MOeMFFQ/profile-displayphoto-shrink_200_200/0/1517406381662?e=1715817600&v=beta&t=mXGtnkWFS6QYc4vpkQPCR1erE3d8u56EDAfzuWsTqv0",
         width: 1200,
         height: 630,
-        alt: "Anish De's Portfolio Site's Opengraph Image",
+        alt: "Alvin Toh's Portfolio Site's Opengraph Image",
       },
     ],
     profile: {
-      firstName: "Anish",
-      lastName: "De",
-      username: "AnishDe12020",
+      firstName: "Alvin",
+      lastName: "Toh",
+      username: "alvin_gman",
       gender: "male",
     },
   },
   twitter: {
-    handle: "@AnishDe12020",
-    site: "@AnishDe12020",
+    handle: "@lvin_gman",
+    site: "@alvin_gman",
     cardType: "summary_large_image",
   },
 };
