@@ -28,7 +28,7 @@ const BlogPostsPage: NextPage<BlogPostsPageProps> = ({ posts }) => {
             date={post.dateAdded}
             readingTime={post.readingTime.text}
             excerpt={post.brief}
-            url={`https://${hashnodeData.domain}/${post.slug}`}
+            url={`${hashnodeData.domain}/${post.slug}`}
           />
         ))}
       </div>

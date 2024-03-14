@@ -8,21 +8,27 @@ const HASHNODE_USERNAME = "AnishDe12020";
 
 const main = async () => {
   const query = `
-query($username: String!, $page: Int!) {
-	user(username: $username) {
-    publicationDomain
-		publication {
-			posts(page: $page) {
-        _id
-				slug
-				title
-				brief
-				coverImage
-        dateAdded
-      	contentMarkdown
-			}
-		}
-	}
+  query($username: String!, $page: Int!, $pageSize: Int!) {
+    user(username: $username) {
+    posts(page: $page, pageSize: $pageSize, sortBy: DATE_PUBLISHED_DESC) {
+      nodes {
+        publication{
+          url
+        }
+        id
+        slug 
+        title
+        brief
+        coverImage {
+          url
+        }
+        publishedAt
+        content {
+          markdown
+        }
+      }
+    }
+  }
 }
 `;
 
@@ -30,7 +36,7 @@ query($username: String!, $page: Int!) {
   let domain: string;
   let didNotGetData = true;
 
-  for (let page = 0; didNotGetData; page++) {
+  for (let page = 1; didNotGetData; page++) {
     try {
       const res = await axios.post(
         HASHNODE_API_URL,
@@ -39,6 +45,7 @@ query($username: String!, $page: Int!) {
           variables: {
             username: HASHNODE_USERNAME,
             page,
+            pageSize: 10,
           },
         }),
         {
@@ -52,12 +59,25 @@ query($username: String!, $page: Int!) {
         data: { data },
       } = res;
 
-      if (data.user.publication.posts.length === 0) {
-        domain = data.user.publicationDomain;
+      if (data.user.posts.nodes.length === 0) {
         didNotGetData = false;
         break;
       } else {
-        posts.push(...data.user.publication.posts);
+        const originalPostLists = [];
+        data.user.posts.nodes.forEach(post => {
+          domain = post.publication.url;
+          // Transform and push updated graph response to posts
+          const originalPostObject = {};
+          originalPostObject["_id"] = post.id;
+          originalPostObject["slug"] = post.slug;
+          originalPostObject["title"] = post.title;
+          originalPostObject["brief"] = post.brief;
+          originalPostObject["coverImage"] = post.coverImage.url;
+          originalPostObject["dateAdded"] = post.publishedAt;
+          originalPostObject["contentMarkdown"] = post.content.markdown;
+          originalPostLists.push(originalPostObject);
+        });
+        posts.push(...originalPostLists);
       }
     } catch (error) {
       console.error(error.response.data.errors);

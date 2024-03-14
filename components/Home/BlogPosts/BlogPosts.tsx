@@ -21,7 +21,7 @@ const BlogPosts = ({ posts, domain }: BlogPostsProps): JSX.Element => {
             placeholderImage={post.placeholderImage}
             date={post.dateAdded}
             readingTime={post.readingTime.text}
-            url={`https://${domain}/${post.slug}`}
+            url={`${domain}/${post.slug}`}
           />
         ))}
       </div>
