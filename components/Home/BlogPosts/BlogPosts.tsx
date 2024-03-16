@@ -5,10 +5,9 @@ import { HashnodePostWithPlaceHolderImage } from "types/hashnode";
 
 interface BlogPostsProps {
   posts: HashnodePostWithPlaceHolderImage[];
-  domain: string;
 }
 
-const BlogPosts = ({ posts, domain }: BlogPostsProps): JSX.Element => {
+const BlogPosts = ({ posts }: BlogPostsProps): JSX.Element => {
   return (
     <>
       <h2 className="mb-8 text-3xl font-bold">Blog Posts</h2>
@@ -21,7 +20,7 @@ const BlogPosts = ({ posts, domain }: BlogPostsProps): JSX.Element => {
             placeholderImage={post.placeholderImage}
             date={post.dateAdded}
             readingTime={post.readingTime.text}
-            url={`${domain}/${post.slug}`}
+            url={`${post.domain}/${post.slug}`}
           />
         ))}
       </div>

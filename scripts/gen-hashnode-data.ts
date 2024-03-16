@@ -33,7 +33,6 @@ const main = async () => {
 `;
 
   const posts = [];
-  let domain: string;
   let didNotGetData = true;
 
   for (let page = 1; didNotGetData; page++) {
@@ -65,7 +64,6 @@ const main = async () => {
       } else {
         const originalPostLists = [];
         data.user.posts.nodes.forEach(post => {
-          domain = post.publication.url;
           // Transform and push updated graph response to posts
           const originalPostObject = {};
           originalPostObject["_id"] = post.id;
@@ -75,6 +73,7 @@ const main = async () => {
           originalPostObject["coverImage"] = post.coverImage.url;
           originalPostObject["dateAdded"] = post.publishedAt;
           originalPostObject["contentMarkdown"] = post.content.markdown;
+          originalPostObject["domain"] = post.publication.url;
           originalPostLists.push(originalPostObject);
         });
         posts.push(...originalPostLists);
@@ -98,7 +97,7 @@ const main = async () => {
 
   fs.writeFileSync(
     HASHNODE_DATA_FILE_PATH,
-    JSON.stringify({ posts: parsedPosts, domain })
+    JSON.stringify({ posts: parsedPosts })
   );
 };
 

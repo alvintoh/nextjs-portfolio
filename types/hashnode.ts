@@ -9,6 +9,7 @@ interface HashnodePost {
   dateAdded: string;
   readingTime: ReadTimeResults;
   wordCount: number;
+  domain: string;
 }
 
 interface HashnodePostWithPlaceHolderImage extends HashnodePost {

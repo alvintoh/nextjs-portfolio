@@ -1,7 +1,7 @@
 import {
   defineDocumentType,
   defineNestedType,
-  makeSource
+  makeSource,
 } from "contentlayer/source-files";
 
 import rehypeSlug from "rehype-slug";
@@ -116,6 +116,11 @@ export const BlogPost = defineDocumentType(() => ({
       type: "nested",
       description: "Image for the blog post",
       of: CloudinaryImage,
+    },
+    domain: {
+      type: "string",
+      description: "The domain to the blog post",
+      required: true,
     },
   },
   computedFields: {
