@@ -1,10 +1,14 @@
 import axios from "axios";
 import fs from "fs";
 import readingTime from "reading-time";
+import dotenv from "dotenv";
 
+dotenv.config();
 const HASHNODE_DATA_FILE_PATH = "./data/hashnode.json";
 const HASHNODE_API_URL = "https://gql.hashnode.com/";
-const HASHNODE_USERNAME = "AnishDe12020";
+const HASHNODE_USERNAME = process.env.NEXT_PUBLIC_HASHNODE_USERNAME
+  ? process.env.NEXT_PUBLIC_HASHNODE_USERNAME
+  : "AnishDe12020";
 
 const main = async () => {
   const query = `

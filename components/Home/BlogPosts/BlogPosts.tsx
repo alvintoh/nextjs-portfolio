@@ -10,7 +10,12 @@ interface BlogPostsProps {
 const BlogPosts = ({ posts }: BlogPostsProps): JSX.Element => {
   return (
     <>
-      <h2 className="mb-8 text-3xl font-bold">Blog Posts</h2>
+      <h2 className="mb-8 text-3xl font-bold">
+        Blog Posts by{" "}
+        <Link href={`${process.env.NEXT_PUBLIC_HASHNODE_USERNAME_BLOG}`}>
+          <a>{process.env.NEXT_PUBLIC_HASHNODE_USERNAME}</a>
+        </Link>
+      </h2>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {posts.slice(0, 4).map(post => (
           <BlogPostCard

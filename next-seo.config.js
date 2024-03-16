@@ -1,33 +1,46 @@
 const defaultSEOConfig = {
-  title: "Alvin Toh | Fullstack Developer",
+  title:
+    process.env.NEXT_PUBLIC_PORTFOLIO_TITLE ||
+    "Alvin Toh | Full Stack Developer",
   description:
+    process.env.NEXT_PUBLIC_PORTFOLIO_DESCRIPTION ||
     "Full Stack Developer • Creative Problem Solver • Lifelong Learner • Tech Enthusiast",
-  cannonical: "https://www.linkedin.com/in/alvintohyz",
+  cannonical:
+    process.env.NEXT_PUBLIC_PORTFOLIO_URL || "https://alvin-dev.vercel.app",
   openGraph: {
     type: "website",
-    url: "https://www.linkedin.com/in/alvintohyz",
-    site_name: "Alvin Toh",
-    title: "Alvin Toh | Full Stack Developer",
+    url:
+      process.env.NEXT_PUBLIC_PORTFOLIO_URL || "https://alvin-dev.vercel.app",
+    site_name:
+      process.env.NEXT_PUBLIC_PORTFOLIO_URL_SITE_NAME || "Alvin Toh Portfolio",
+    title:
+      process.env.NEXT_PUBLIC_PORTFOLIO_TITLE ||
+      "Alvin Toh | Full Stack Developer",
     description:
+      process.env.NEXT_PUBLIC_PORTFOLIO_DESCRIPTION ||
       "Full Stack Developer • Creative Problem Solver • Lifelong Learner • Tech Enthusiast",
     images: [
       {
-        url: "https://media.licdn.com/dms/image/C4E03AQGS-P-MOeMFFQ/profile-displayphoto-shrink_200_200/0/1517406381662?e=1715817600&v=beta&t=mXGtnkWFS6QYc4vpkQPCR1erE3d8u56EDAfzuWsTqv0",
+        url:
+          process.env.NEXT_PUBLIC_SEO_IMAGE_URL ||
+          "https://media.licdn.com/dms/image/C4E03AQGS-P-MOeMFFQ/profile-displayphoto-shrink_200_200/0/1517406381662?e=1715817600&v=beta&t=mXGtnkWFS6QYc4vpkQPCR1erE3d8u56EDAfzuWsTqv0",
         width: 1200,
         height: 630,
-        alt: "Alvin Toh's Portfolio Site's Opengraph Image",
+        alt:
+          process.env.NEXT_PUBLIC_SEO_IMAGE_ALT ||
+          "https://media.licdn.com/dms/image/C4E03AQGS-P-MOeMFFQ/profile-displayphoto-shrink_200_200/0/1517406381662?e=1715817600&v=beta&t=mXGtnkWFS6QYc4vpkQPCR1erE3d8u56EDAfzuWsTqv0",
       },
     ],
     profile: {
-      firstName: "Alvin",
-      lastName: "Toh",
-      username: "alvin_gman",
-      gender: "male",
+      firstName: process.env.NEXT_PUBLIC_SEO_FIRST_NAME || "Alvin",
+      lastName: process.env.NEXT_PUBLIC_SEO_LAST_NAME || "Toh",
+      username: process.env.NEXT_PUBLIC_SEO_USERNAME || "alvin_gman",
+      gender: process.env.NEXT_PUBLIC_SEO_GENDER || "male",
     },
   },
   twitter: {
-    handle: "@lvin_gman",
-    site: "@alvin_gman",
+    handle: process.env.NEXT_PUBLIC_TWITTER_HANDLE || "@lvin_gman",
+    site: process.env.NEXT_PUBLIC_TWITTER_SITE || "@alvin_gman",
     cardType: "summary_large_image",
   },
 };
