@@ -1,7 +1,6 @@
-import NextImage from "next/image";
-
 import Link from "@/components/Shared/Link";
 import { CloudinaryImage } from "contentlayer/generated";
+import NextImage from "next/image";
 
 interface BlogPostCardProps {
   slug: string;

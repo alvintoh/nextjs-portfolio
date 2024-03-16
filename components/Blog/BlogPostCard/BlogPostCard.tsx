@@ -1,7 +1,6 @@
-import NextImage from "next/image";
-
 import Link from "@/components/Shared/Link";
 import { format, parseISO } from "date-fns";
+import NextImage from "next/image";
 
 interface BlogPostCardProps {
   url: string;

@@ -1,5 +1,5 @@
-import { MDXComponents } from "mdx/types";
 import Link from "@/components/Shared/Link";
+import { MDXComponents } from "mdx/types";
 import { cloneElement, useRef } from "react";
 
 const CodeBlock = props => {

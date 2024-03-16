@@ -1,12 +1,10 @@
-import { GetStaticProps, NextPage } from "next";
-
 import ProjectCard from "@/components/Projects/ProjectCard";
-
-import { allProjects, Project } from "contentlayer/generated";
 import Link from "@/components/Shared/Link";
-import { ArrowRight } from "react-feather";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";
+import { allProjects, Project } from "contentlayer/generated";
+import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
+import { ArrowRight } from "react-feather";
 
 export interface ProjectWithPlaceholderImage extends Project {
   placeholderImage: string;

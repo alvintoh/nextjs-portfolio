@@ -1,13 +1,11 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import NextImage from "next/image";
-
-import { allBlogPosts, BlogPost } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/Common/MDXComponents";
 import CustomGiscus from "@/components/Shared/CustomGiscus";
-
-import AvatarJPG from "public/static/images/avatar.jpg";
+import { allBlogPosts, BlogPost } from "contentlayer/generated";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { useMDXComponent } from "next-contentlayer/hooks";
 import { NextSeo } from "next-seo";
+import NextImage from "next/image";
+import AvatarJPG from "public/static/images/avatar.jpg";
 
 interface BlogPostPageProps {
   blogPost: BlogPost;

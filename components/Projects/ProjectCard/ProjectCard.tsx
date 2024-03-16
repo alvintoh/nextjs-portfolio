@@ -1,9 +1,8 @@
-import NextImage from "next/image";
-
-import { cleanLink, getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
-import Link from "@/components/Shared/Link";
-import { CloudinaryImage } from "contentlayer/generated";
 import { GitHubLogo } from "@/components/Shared/Icons";
+import Link from "@/components/Shared/Link";
+import { cleanLink, getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
+import { CloudinaryImage } from "contentlayer/generated";
+import NextImage from "next/image";
 import { forwardRef } from "react";
 
 interface ProjectProps {
@@ -31,7 +30,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
   ): JSX.Element => {
     return (
       <div
-        className="flex flex-col space-y-8 rounded-xl border-[1px] border-tertiary bg-secondary/50 p-4 md:h-48 md:flex-row md:space-y-0 md:space-x-8"
+        className="flex flex-col space-y-8 rounded-xl border-[1px] border-tertiary bg-secondary/50 p-4 md:h-48 md:flex-row md:space-x-8 md:space-y-0"
         ref={ref}
       >
         <div className="overflow-hidden rounded-lg md:w-72">

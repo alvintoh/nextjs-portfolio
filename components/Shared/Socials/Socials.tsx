@@ -1,8 +1,9 @@
-import socials from "@/data/socials";
-import { cloneElement, HTMLAttributes, ReactElement } from "react";
-import cx from "classnames";
 import Link from "../Link";
 import Tooltip from "../Tooltip";
+
+import socials from "@/data/socials";
+import cx from "classnames";
+import { cloneElement, HTMLAttributes, ReactElement } from "react";
 
 interface SocialsProps extends HTMLAttributes<HTMLDivElement> {
   small?: boolean;

@@ -1,7 +1,6 @@
-import { GetStaticProps, NextPage } from "next";
-
-import { allBlogPosts, BlogPost } from "contentlayer/generated";
 import BlogPostCard from "@/components/BlogWIP/BlogPostCard";
+import { allBlogPosts, BlogPost } from "contentlayer/generated";
+import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 
 interface BlogPostsPageProps {

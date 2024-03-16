@@ -1,20 +1,21 @@
-import { SVGProps } from "react";
-import { X } from "react-feather";
+import StorliLogo from "./Storli";
 
 import {
-  NextJSLogo,
-  TypescriptLogo,
-  XdoXLogo,
-  ReactLogo,
   FigmaLogo,
   GoLogo,
-  TailwindCSSLogo,
+  NextJSLogo,
   NotigerLogo,
-  TwNFTLogo,
+  PayPeerLogo,
+  ReactLogo,
   SecliLogo,
-  PayPeerLogo
+  TailwindCSSLogo,
+  TwNFTLogo,
+  TypescriptLogo,
+  XdoXLogo,
 } from ".";
-import StorliLogo from "./Storli";
+
+import { SVGProps } from "react";
+import { X } from "react-feather";
 
 interface IconFactoryProps extends SVGProps<SVGSVGElement> {
   name: string;

@@ -1,16 +1,15 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import NextImage from "next/image";
-
-import Link from "@/components/Shared/Link";
-import { allProjects, Project } from "contentlayer/generated";
-import IconFactory from "@/components/Shared/Icons/IconFactory";
-import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/Common/MDXComponents";
 import CustomGiscus from "@/components/Shared/CustomGiscus";
-import { getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
 import { GitHubLogo } from "@/components/Shared/Icons";
+import IconFactory from "@/components/Shared/Icons/IconFactory";
+import Link from "@/components/Shared/Link";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";
+import { getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
+import { allProjects, Project } from "contentlayer/generated";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { useMDXComponent } from "next-contentlayer/hooks";
 import { NextSeo } from "next-seo";
+import NextImage from "next/image";
 
 interface ProjectPageProps {
   project: Project;
@@ -53,7 +52,7 @@ const SkillPage: NextPage<ProjectPageProps> = ({
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
         {project.link && (
           <Link href={project.link} noHighlight>
             {project.link}

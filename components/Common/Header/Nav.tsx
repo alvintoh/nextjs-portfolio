@@ -1,10 +1,10 @@
+import MobileNavItem from "./MobileNavItem";
+import NavItem from "./NavItem";
+
 import { Variants, motion } from "framer-motion";
 import { Rotate as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
-import MobileNavItem from "./MobileNavItem";
-import NavItem from "./NavItem";
 
 const navItems = [
   {

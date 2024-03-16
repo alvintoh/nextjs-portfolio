@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
 import {
-  LinkedInLogo,
   GitHubLogo,
-  LeetCodeLogo,
   HashnodeLogo,
+  LeetCodeLogo,
+  LinkedInLogo,
   YouTubeLogo,
 } from "@/components/Shared/Icons";
 

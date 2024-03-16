@@ -1,21 +1,19 @@
-import type { AppProps } from "next/app";
-import NextNProgress from "nextjs-progressbar";
+import SEO from "../next-seo.config";
 
 import CommandBarInvoker from "@/components/Common/CommandBarInvoker";
 import CustomToaster from "@/components/Common/CustomToaster";
+import Footer from "@/components/Common/Footer";
 import Header from "@/components/Common/Header";
 import KProvider from "@/components/Common/KProvider";
-
+import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
+import type { AppProps } from "next/app";
+import Script from "next/script";
+import NextNProgress from "nextjs-progressbar";
 import useCircles from "store/circles";
 
-import "../styles/globals.css";
-
-import "@fontsource/syncopate";
 import "@fontsource/sen";
-import Footer from "@/components/Common/Footer";
-import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
-import SEO from "../next-seo.config";
-import Script from "next/script";
+import "@fontsource/syncopate";
+import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const { isEnabled } = useCircles();

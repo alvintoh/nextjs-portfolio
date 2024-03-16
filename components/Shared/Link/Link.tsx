@@ -1,4 +1,5 @@
 import cx from "classnames";
+import NextLink from "next/link";
 import {
   AnchorHTMLAttributes,
   cloneElement,
@@ -7,7 +8,6 @@ import {
   ReactNode,
 } from "react";
 import { ArrowUpRight } from "react-feather";
-import NextLink from "next/link";
 
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;

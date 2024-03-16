@@ -1,5 +1,5 @@
-import { NextPage } from "next";
 import Giscus from "@giscus/react";
+import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
 const GuestBookPage: NextPage = () => {

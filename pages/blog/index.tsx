@@ -1,11 +1,10 @@
-import { GetStaticProps, NextPage } from "next";
-
-import hashnodeData from "@/data/hashnode.json";
 import BlogPostCard from "@/components/Blog/BlogPostCard";
-import getPreviewImageUrl from "@/utils/getPreviewImageURL";
-import { HashnodePostWithPlaceHolderImage } from "types/hashnode";
-import { NextSeo } from "next-seo";
 import Link from "@/components/Shared/Link";
+import hashnodeData from "@/data/hashnode.json";
+import getPreviewImageUrl from "@/utils/getPreviewImageURL";
+import { GetStaticProps, NextPage } from "next";
+import { NextSeo } from "next-seo";
+import { HashnodePostWithPlaceHolderImage } from "types/hashnode";
 
 interface BlogPostsPageProps {
   posts: HashnodePostWithPlaceHolderImage[];

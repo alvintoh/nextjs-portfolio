@@ -1,9 +1,8 @@
+import Kbd from "@/components/Shared/Kbd";
 import cx from "classnames";
 import { KBarResults, useMatches } from "kbar";
 import { ReactElement, cloneElement } from "react";
 import { ArrowRight } from "react-feather";
-
-import Kbd from "@/components/Shared/Kbd";
 
 const KResults = () => {
   const { results } = useMatches();
@@ -13,7 +12,7 @@ const KResults = () => {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <div className="px-3 pt-4 pb-2 text-sm text-gray-400">{item}</div>
+          <div className="px-3 pb-2 pt-4 text-sm text-gray-400">{item}</div>
         ) : (
           <div
             className={cx(

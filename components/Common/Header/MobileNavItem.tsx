@@ -1,7 +1,7 @@
 import Link from "@/components/Shared/Link";
 import cx from "classnames";
-import { ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
+import { ReactNode } from "react";
 
 interface MobileNavItemProps {
   href: string;

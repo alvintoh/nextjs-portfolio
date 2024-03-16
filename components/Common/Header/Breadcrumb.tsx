@@ -1,9 +1,8 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import BreadcrumbItem from "./BreadcrumbItem";
 
 import { capitalize } from "@/utils/helpers";
-
-import BreadcrumbItem from "./BreadcrumbItem";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 interface IBreadcrumb {
   href: string;
