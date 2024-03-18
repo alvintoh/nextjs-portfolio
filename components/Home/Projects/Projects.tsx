@@ -12,7 +12,7 @@ const Projects = ({ projects }: ProjectProps): JSX.Element => {
     <>
       <div className="my-16 flex flex-col">
         <h2 className="mb-8 text-3xl font-bold">Projects</h2>
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-8 ">
           {projects.slice(0, 3).map(project => (
             <div
               key={project._id}

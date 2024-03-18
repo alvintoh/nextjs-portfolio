@@ -42,7 +42,7 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           ],
         }}
       />
-      <div className="mt-8 flex space-x-8">
+      <div className="mt-8 flex space-x-3 sm:space-x-8">
         <IconFactory
           name={project.iconName}
           className="h-16 w-16 rounded-xl bg-tertiary p-2 shadow-md"
@@ -57,23 +57,21 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           <p className="text-sm text-gray-300">{project.description}</p>
         </div>
       </div>
-
-      <div className="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
         {project.link && (
           <Link href={project.link} noHighlight>
             {project.link}
           </Link>
         )}
       </div>
-      <div className="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
         {project.githubLink && (
           <Link href={project.githubLink} icon={<GitHubLogo />} noHighlight>
             {getGitHubOwnerAndRepoFromLink(project.githubLink)}
           </Link>
         )}
       </div>
-
-      <div className="mt-10 overflow-hidden rounded-2xl border-[1px] border-tertiary p-0 shadow-md">
+      <div className="mt-6 overflow-hidden rounded-2xl border-[1px] border-tertiary p-0 shadow-md">
         <NextImage
           width={project.image.width}
           height={project.image.height}
@@ -83,7 +81,6 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           alt={project.name}
         />
       </div>
-
       <article>
         <div className="prose my-12 max-w-full leading-8">
           <ProjectMDX components={{ ...MDXComponents }} />
