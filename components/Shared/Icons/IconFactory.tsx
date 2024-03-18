@@ -1,16 +1,19 @@
-import StorliLogo from "./Storli";
-
 import {
   FigmaLogo,
   GoLogo,
+  GoProjectsLogo,
   NextJSLogo,
   NotigerLogo,
+  NotionCloneLogo,
   PayPeerLogo,
   ReactLogo,
   SecliLogo,
+  StorliLogo,
   TailwindCSSLogo,
+  TechInfraLogo,
   TwNFTLogo,
   TypescriptLogo,
+  WalterLogo,
   XdoXLogo,
 } from ".";
 
@@ -50,6 +53,14 @@ const IconFactory = ({
       return <SecliLogo {...otherProps} />;
     case "paypeer":
       return <PayPeerLogo {...otherProps} />;
+    case "notionclone":
+      return <NotionCloneLogo {...otherProps} />;
+    case "walter":
+      return <WalterLogo {...otherProps} />;
+    case "goprojects":
+      return <GoProjectsLogo {...otherProps} />;
+    case "techinfra":
+      return <TechInfraLogo {...otherProps} />;
     default:
       return <X />;
   }

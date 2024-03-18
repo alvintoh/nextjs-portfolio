@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 import {
   GitHubLogo,
   HashnodeLogo,
@@ -7,6 +5,7 @@ import {
   LinkedInLogo,
   YouTubeLogo,
 } from "@/components/Shared/Icons";
+import { ReactNode } from "react";
 
 interface Social {
   id: string;
