@@ -36,6 +36,9 @@ export const getStaticProps: GetStaticProps = async () => {
       ...project,
     });
   }
+  // Sort projectsData in descending order based on publishedDate
+  projectsData.sort((a, b) => (a.publishedDate < b.publishedDate ? 1 : -1));
+
   for (const post of posts) {
     const previewUrl = await getPreviewImageUrl(post.coverImage);
     postsWithPlaceholderImages.push({

@@ -126,6 +126,8 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
     icon: <Code />,
   });
 
+  // Sort projectsData in descending order based on publishedDate
+  allProjects.sort((a, b) => (a.publishedDate < b.publishedDate ? 1 : -1));
   allProjects.map(project => {
     actions.push({
       id: project._id,

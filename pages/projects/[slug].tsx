@@ -6,6 +6,7 @@ import Link from "@/components/Shared/Link";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";
 import { getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
 import { allProjects, Project } from "contentlayer/generated";
+import { format, parseISO } from "date-fns";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { NextSeo } from "next-seo";
@@ -25,11 +26,11 @@ const SkillPage: NextPage<ProjectPageProps> = ({
   return (
     <>
       <NextSeo
-        title={`${project.name} | Anish De`}
+        title={`${project.name} | ${process.env.NEXT_PUBLIC_PORTFOLIO_NAME}`}
         description={project.description}
         openGraph={{
-          url: `https://anishde.dev/projects/${project.slug}`,
-          title: `${project.name} | Anish De`,
+          url: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/projects/${project.slug}`,
+          title: `${project.name} | ${process.env.NEXT_PUBLIC_PORTFOLIO_NAME}`,
           description: project.description,
           images: [
             {
@@ -47,18 +48,24 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           className="h-16 w-16 rounded-xl bg-tertiary p-2 shadow-md"
         />
         <div className="flex flex-col space-y-2">
-          <h1 className="text-2xl font-bold">{project.name}</h1>
+          <h1 className="flex text-2xl font-bold">
+            <span className="no whitespace-nowrap">{project.name} </span>
+            <span className="m-2.5 min-w-[120px] text-xs text-gray-300">
+              / {format(parseISO(project.publishedDate), "MMMM do, yyyy")}
+            </span>
+          </h1>
           <p className="text-sm text-gray-300">{project.description}</p>
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+      <div className="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
         {project.link && (
           <Link href={project.link} noHighlight>
             {project.link}
           </Link>
         )}
-
+      </div>
+      <div className="mt-4 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
         {project.githubLink && (
           <Link href={project.githubLink} icon={<GitHubLogo />} noHighlight>
             {getGitHubOwnerAndRepoFromLink(project.githubLink)}
@@ -66,7 +73,7 @@ const SkillPage: NextPage<ProjectPageProps> = ({
         )}
       </div>
 
-      <div className="mt-16 overflow-hidden rounded-2xl border-[1px] border-tertiary p-0 shadow-md">
+      <div className="mt-10 overflow-hidden rounded-2xl border-[1px] border-tertiary p-0 shadow-md">
         <NextImage
           width={project.image.width}
           height={project.image.height}

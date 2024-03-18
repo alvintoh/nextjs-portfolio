@@ -82,6 +82,11 @@ export const Project = defineDocumentType(() => ({
       description: "Image for the project",
       of: CloudinaryImage,
     },
+    publishedDate: {
+      type: "date",
+      description: "The date when the project was published",
+      required: true,
+    },
   },
   computedFields: {
     slug: {

@@ -20,8 +20,8 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
   return (
     <>
       <NextSeo
-        title="Projects | Anish De"
-        description="Projects worked upon by Anish De"
+        title={`Projects | ${process.env.NEXT_PUBLIC_PORTFOLIO_NAME}`}
+        description={`Projects worked upon by ${process.env.NEXT_PUBLIC_AUTHOR_NAME}`}
       />
       <h1 className="mb-8 text-2xl font-bold">Projects</h1>
       <div className="flex-col space-y-8">
@@ -39,7 +39,7 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
         ))}
       </div>
       <Link
-        href="https://github.com/stars/AnishDe12020/lists/projects"
+        href={process.env.NEXT_PUBLIC_GITHUB_URL}
         className="group mt-8 flex flex-row items-center justify-start space-x-2 text-xl font-medium"
         noExternalLinkIcon
       >
@@ -61,6 +61,10 @@ export const getStaticProps: GetStaticProps = async () => {
       placeholderImage: previewUrl,
     });
   }
+  // Sort projectsData in descending order based on publishedDate
+  allProjectsWithPlaceholderImages.sort((a, b) =>
+    a.publishedDate < b.publishedDate ? 1 : -1
+  );
 
   return {
     props: { allProjectsWithPlaceholderImages },
