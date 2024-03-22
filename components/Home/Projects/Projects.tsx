@@ -1,7 +1,7 @@
 import IconFactory from "@/components/Shared/Icons/IconFactory";
 import Link from "@/components/Shared/Link";
 import { ArrowRight, ExternalLink } from "react-feather";
-import { ProjectData } from "types/projectdata";
+import { ProjectData } from "types/project";
 
 interface ProjectProps {
   projects: ProjectData[];
