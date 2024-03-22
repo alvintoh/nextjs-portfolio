@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-const GoProjectsLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
+const GoProLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     width="512"
     height="512"
@@ -28,4 +28,4 @@ const GoProjectsLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   </svg>
 );
 
-export default GoProjectsLogo;
+export default GoProLogo;

@@ -17,8 +17,8 @@ const navItems = [
   },
   { name: "Blog", href: "/blog" },
   {
-    name: "Achievements",
-    href: "/achievements",
+    name: "About Me",
+    href: "/aboutme",
   },
   {
     name: "Guestbook",

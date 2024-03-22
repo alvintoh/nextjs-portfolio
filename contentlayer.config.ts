@@ -175,9 +175,27 @@ export const Achievement = defineDocumentType(() => ({
   },
 }));
 
+export const Aboutme = defineDocumentType(() => ({
+  name: "Aboutme",
+  filePathPattern: "aboutme/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      description: "The title of the about me",
+      required: true,
+    },
+    description: {
+      type: "string",
+      description: "The description of the about me",
+      required: true,
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Project, BlogPost, Achievement],
+  documentTypes: [Project, BlogPost, Achievement, Aboutme],
   mdx: {
     rehypePlugins: [
       rehypeSlug,

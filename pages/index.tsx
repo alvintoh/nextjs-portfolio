@@ -7,7 +7,7 @@ import getPreviewImageUrl from "@/utils/getPreviewImageURL";
 import { allProjects } from "contentlayer/generated";
 import type { GetStaticProps, NextPage } from "next";
 import { HashnodePostWithPlaceHolderImage } from "types/hashnode";
-import { ProjectData } from "types/projectData";
+import { ProjectData } from "types/projectdata";
 
 interface HomePageProps {
   projects: ProjectData[];

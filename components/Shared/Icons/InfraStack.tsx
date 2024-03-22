@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-const TechInfraLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
+const InfraStackLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="24"
@@ -34,4 +34,4 @@ const TechInfraLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   </svg>
 );
 
-export default TechInfraLogo;
+export default InfraStackLogo;

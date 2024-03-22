@@ -14,10 +14,10 @@ const GuestBookPage: NextPage = () => {
       <div className="mt-16">
         <Giscus
           id="comments"
-          repo="AnishDe12020/portfolio"
-          repoId="R_kgDOGfn4eQ"
+          repo="alvintoh/nextjs-portfolio"
+          repoId="R_kgDOLeypdw"
           category="Comments"
-          categoryId="DIC_kwDOGfn4ec4CO-cF"
+          categoryId="DIC_kwDOLeypd84CeDcD"
           mapping="specific"
           term="GuestBook"
           reactionsEnabled="1"

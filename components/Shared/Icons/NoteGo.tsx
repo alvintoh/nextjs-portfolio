@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-const NotionCloneLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
+const NoteGoLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     width="64"
     height="64"
@@ -24,4 +24,4 @@ const NotionCloneLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   </svg>
 );
 
-export default NotionCloneLogo;
+export default NoteGoLogo;

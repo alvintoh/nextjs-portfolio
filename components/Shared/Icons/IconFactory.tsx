@@ -1,16 +1,16 @@
 import {
   FigmaLogo,
   GoLogo,
-  GoProjectsLogo,
+  GoProLogo,
+  InfraStackLogo,
   NextJSLogo,
+  NoteGoLogo,
   NotigerLogo,
-  NotionCloneLogo,
   PayPeerLogo,
   ReactLogo,
   SecliLogo,
   StorliLogo,
   TailwindCSSLogo,
-  TechInfraLogo,
   TwNFTLogo,
   TypescriptLogo,
   WalterLogo,
@@ -53,14 +53,14 @@ const IconFactory = ({
       return <SecliLogo {...otherProps} />;
     case "paypeer":
       return <PayPeerLogo {...otherProps} />;
-    case "notionclone":
-      return <NotionCloneLogo {...otherProps} />;
+    case "notego":
+      return <NoteGoLogo {...otherProps} />;
     case "walter":
       return <WalterLogo {...otherProps} />;
-    case "goprojects":
-      return <GoProjectsLogo {...otherProps} />;
-    case "techinfra":
-      return <TechInfraLogo {...otherProps} />;
+    case "gopro":
+      return <GoProLogo {...otherProps} />;
+    case "infrastack":
+      return <InfraStackLogo {...otherProps} />;
     default:
       return <X />;
   }
