@@ -1,4 +1,4 @@
-import React, { SVGProps, Suspense } from "react";
+import React, { SVGProps } from "react";
 import { X } from "react-feather";
 
 interface IconFactoryProps extends SVGProps<SVGSVGElement> {
@@ -9,15 +9,23 @@ const IconFactory = ({
   name,
   ...otherProps
 }: IconFactoryProps): JSX.Element | null => {
-  const Component = React.lazy(() =>
-    import(`./${name}`).catch(() => ({ default: X }))
-  );
+  const [Component, setComponent] = React.useState<React.FC<
+    SVGProps<SVGSVGElement>
+  > | null>(null);
 
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Component {...otherProps} />
-    </Suspense>
-  );
+  React.useEffect(() => {
+    import(`./${name}`)
+      .then(module => {
+        const IconComponent = module.default;
+        setComponent(() => IconComponent);
+      })
+      .catch(error => {
+        console.error(`Failed to load icon: ${name}`, error);
+        setComponent(() => X);
+      });
+  }, [name, otherProps]);
+
+  return Component ? <Component {...otherProps} /> : null;
 };
 
 export default IconFactory;
