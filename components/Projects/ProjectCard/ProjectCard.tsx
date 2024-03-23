@@ -1,4 +1,4 @@
-import GitHubLogo from "@/components/Shared/Icons/GitHub";
+import GitHubLogo from "@/components/Shared/Icons/github";
 import Link from "@/components/Shared/Link";
 import { cleanLink, getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
 import { CloudinaryImage } from "contentlayer/generated";
