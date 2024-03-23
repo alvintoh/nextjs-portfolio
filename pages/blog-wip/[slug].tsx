@@ -24,6 +24,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blogPost }) => {
           width={blogPost.image.width}
           height={blogPost.image.height}
           src={blogPost.image.url}
+          alt="Blog post alt image"
           className="rounded-xl drop-shadow-md"
         />
       </div>
@@ -36,6 +37,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blogPost }) => {
               placeholder="blur"
               height={32}
               width={32}
+              alt="Blog post alt image"
               className="rounded-full"
             />
           </div>

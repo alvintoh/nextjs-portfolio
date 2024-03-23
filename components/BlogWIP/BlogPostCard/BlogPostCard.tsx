@@ -34,6 +34,7 @@ const ProjectCard = ({
           src={image.url}
           height={image.height}
           width={image.width}
+          alt="Blog post alt image"
           className="rounded-lg drop-shadow-md transition duration-200 hover:opacity-60"
         />
       </Link>
