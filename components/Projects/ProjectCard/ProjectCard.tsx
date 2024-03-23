@@ -35,13 +35,14 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
       >
         <div className="overflow-hidden rounded-lg md:w-72">
           <Link href={`/projects/${slug}`}>
-            <div className="relative h-36 w-full transition duration-200 hover:opacity-60 md:h-full md:w-72">
+            <div className="fill relative h-36 w-full transition duration-200 hover:opacity-60 md:h-full md:w-72">
               <NextImage
                 src={image.url}
                 alt={name}
                 className="rounded-xl"
-                layout="fill"
                 placeholder="blur"
+                height={628}
+                width={1200}
                 blurDataURL={placeholderImage}
               />
             </div>
