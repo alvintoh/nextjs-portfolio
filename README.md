@@ -10,41 +10,38 @@ npm install
 npm run dev
 ```
 
-## Screenshots
-**Home Page**
+## Environment File
+Create a .env file with the following variables set to change to your portfolio information
 
-![image](https://user-images.githubusercontent.com/63192115/172039448-8a79e500-0819-4e99-a653-471174661606.png)
+```
+NEXT_PUBLIC_PORTFOLIO_NAME=
+NEXT_PUBLIC_PORTFOLIO_TITLE=
+NEXT_PUBLIC_PORTFOLIO_DESCRIPTION=
+NEXT_PUBLIC_PORTFOLIO_INTRODUCTION="
+NEXT_PUBLIC_PORTFOLIO_URL=
+NEXT_PUBLIC_PORTFOLIO_URL_SITE_NAME=
+NEXT_PUBLIC_PORTFOLIO_EMAIL=
 
----
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
+NEXT_PUBLIC_LEETCODE_URL=
+NEXT_PUBLIC_HASHNODE_URL=
+NEXT_PUBLIC_YOUTUBE_URL=
 
-**Command Bar**
+NEXT_PUBLIC_UMAMI_SCRIPT_URL=
+NEXT_PUBLIC_UMAMI_WEBSITE_ID=
+NEXT_PUBLIC_HASHNODE_USERNAME=
+NEXT_PUBLIC_HASHNODE_USERNAME_BLOG=
 
-![image](https://user-images.githubusercontent.com/63192115/172039508-16ffbcc3-ab92-4e9c-a1e1-ea6e0cd50686.png)
-
----
-
-**All Projects**
-
-![image](https://user-images.githubusercontent.com/63192115/172039453-af995e3d-1b27-4246-b4c1-99acec3c5e7f.png)
-
----
-
-**A single project**
-
-![image](https://user-images.githubusercontent.com/63192115/172039474-12354f77-1c82-4d72-ab03-e26e6df9d276.png)
-
----
-
-**All blog posts**
-
-![image](https://user-images.githubusercontent.com/63192115/172039459-28acc7c3-cab4-4c31-8fc8-dc7febd6f707.png)
-
----
-
-**Guestbook**
-
-![image](https://user-images.githubusercontent.com/63192115/172039464-c008cb2f-4f13-44cd-b06e-71eb479ea5a5.png)
-
+NEXT_PUBLIC_SEO_IMAGE_URL=
+NEXT_PUBLIC_SEO_IMAGE_ALT=
+NEXT_PUBLIC_SEO_FIRST_NAME=
+NEXT_PUBLIC_SEO_LAST_NAME=
+NEXT_PUBLIC_SEO_USERNAME=
+NEXT_PUBLIC_SEO_GENDER=
+NEXT_PUBLIC_TWITTER_HANDLE=
+NEXT_PUBLIC_TWITTER_SITE=
+```
 
 ## Contributing
 Found some issue with the website? Please open a issue or a pull request!
