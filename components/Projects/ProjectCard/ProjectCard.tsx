@@ -30,19 +30,19 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
   ): JSX.Element => {
     return (
       <div
-        className="flex flex-col space-y-8 rounded-xl border-[1px] border-tertiary bg-secondary/50 p-4 md:h-[220px] md:flex-row md:space-x-8 md:space-y-0"
+        className="flex flex-col space-y-8 rounded-xl border-[1px] border-tertiary bg-secondary/50 p-4 hover:border-accent md:h-[220px] md:flex-row md:space-x-8 md:space-y-0"
         ref={ref}
       >
-        <div className="overflow-hidden rounded-lg md:w-72">
+        <div className="aspect-[16/9] overflow-hidden rounded-2xl drop-shadow-md">
           <Link href={`/projects/${slug}`}>
-            <div className="fill relative h-36 w-full transition duration-200 hover:opacity-60 md:h-full md:w-72">
+            <div className="rounded-lg transition duration-200 hover:opacity-60">
               <NextImage
                 src={image.url}
+                className="rounded-lg transition duration-200 hover:opacity-60"
+                height={270}
+                width={480}
                 alt={name}
-                className="rounded-xl"
                 placeholder="blur"
-                height={628}
-                width={1200}
                 blurDataURL={placeholderImage}
               />
             </div>
@@ -56,15 +56,15 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
             >
               <h2 className="text-2xl font-bold">{name}</h2>
             </Link>
-            <p className="text-sm text-gray-300">{description}</p>
-            <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-x-2 md:space-y-0">
+            <p className="text-base text-gray-300">{description}</p>
+            <div className="flex flex-col space-y-2 text-sm md:flex-row md:items-center md:space-x-2 md:space-y-0">
               {link && (
                 <Link href={link} noHighlight>
                   {cleanLink(link)}
                 </Link>
               )}
             </div>
-            <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-x-2 md:space-y-0">
+            <div className="flex flex-col space-y-2 text-sm md:flex-row md:items-center md:space-x-2 md:space-y-0">
               {githubLink && (
                 <Link href={githubLink} icon={<GitHubLogo />} noHighlight>
                   {getGitHubOwnerAndRepoFromLink(githubLink)}
@@ -74,7 +74,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
           </div>
           <Link
             href={`/projects/${slug}`}
-            className="mt-2 text-lg"
+            className="mt-4 text-lg"
             gradientUnderline
           >
             <p className="sr-only">Learn more about {name}</p>

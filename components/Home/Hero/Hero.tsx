@@ -22,7 +22,8 @@ const Hero = (): JSX.Element => {
       <div className="will-change-opacity relative h-32 w-32 overflow-hidden rounded-full will-change-transform">
         <NextImage
           src={AvatarJPG}
-          layout="fill"
+          width={128}
+          height={128}
           placeholder="blur"
           alt={`${process.env.NEXT_PUBLIC_NAME || "Alvin Toh"}  Image`}
         />

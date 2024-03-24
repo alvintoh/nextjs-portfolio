@@ -20,17 +20,19 @@ const Projects = ({ projects }: ProjectProps): JSX.Element => {
             >
               <Link
                 href={`/projects/${project.slug}`}
-                className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0"
+                className="flex flex-col space-y-8 px-2 md:flex-row md:space-x-4 md:space-y-0"
               >
                 <IconFactory
                   name={project.iconName}
-                  className="h-12 w-12 rounded-xl bg-tertiary p-1.5 shadow-md"
+                  className="my-1.5 h-6 w-6 rounded-xl bg-tertiary shadow-md md:space-y-2"
                 />
-                <div className="flex-col space-y-2">
+                <div className="flex-col space-y-1">
                   <h3 className="flex flex-row items-center space-x-2 text-lg font-semibold">
                     {project.name}
                   </h3>
-                  <p className="text-md text-gray-300">{project.description}</p>
+                  <p className="text-base text-gray-300">
+                    {project.description}
+                  </p>
                 </div>
               </Link>
               {(project.link || project.githubLink) && (

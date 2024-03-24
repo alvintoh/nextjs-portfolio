@@ -1,7 +1,6 @@
 import MDXComponents from "@/components/Common/MDXComponents";
 import CustomGiscus from "@/components/Shared/CustomGiscus";
 import { GitHubLogo } from "@/components/Shared/Icons";
-import IconFactory from "@/components/Shared/Icons/IconFactory";
 import Link from "@/components/Shared/Link";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";
 import { getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
@@ -34,7 +33,7 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           description: project.description,
           images: [
             {
-              url: project.image.url,
+              url: projectImagePreview,
               width: project.image.width,
               height: project.image.height,
               alt: project.name,
@@ -42,29 +41,25 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           ],
         }}
       />
-      <div className="mt-8 flex space-x-3 sm:space-x-8">
-        <IconFactory
-          name={project.iconName}
-          className="h-16 w-16 rounded-xl bg-tertiary p-2 shadow-md"
-        />
+      <div className="mt-8 flex space-x-3 sm:space-x-4">
         <div className="flex flex-col space-y-2">
           <h1 className="flex text-2xl font-bold">
             <span className="no whitespace-nowrap">{project.name} </span>
-            <span className="m-2.5 min-w-[120px] text-xs text-gray-300">
+            <span className="m-2.5 text-xs text-gray-300">
               / {format(parseISO(project.publishedDate), "MMMM do, yyyy")}
             </span>
           </h1>
-          <p className="text-sm text-gray-300">{project.description}</p>
+          <p className="text-base text-gray-300">{project.description}</p>
         </div>
       </div>
-      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+      <div className="mt-4 flex flex-col space-y-2 text-sm md:flex-row md:space-x-2 md:space-y-0">
         {project.link && (
           <Link href={project.link} noHighlight>
             {project.link}
           </Link>
         )}
       </div>
-      <div className="mt-6 flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+      <div className="mt-2 flex flex-col space-y-2 text-sm md:flex-row md:space-x-2 md:space-y-0">
         {project.githubLink && (
           <Link href={project.githubLink} icon={<GitHubLogo />} noHighlight>
             {getGitHubOwnerAndRepoFromLink(project.githubLink)}

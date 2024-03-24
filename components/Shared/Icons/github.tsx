@@ -2,10 +2,10 @@ import { SVGProps } from "react";
 
 const GitHubLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
-    aria-hidden="true"
-    data-prefix="fab"
-    data-icon="github"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    data-icon="github"
+    data-prefix="fab"
     viewBox="0 0 496 512"
     {...props}
   >
