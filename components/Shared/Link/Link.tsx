@@ -47,7 +47,7 @@ const ExternalLink = forwardRef<HTMLAnchorElement, ExternalLinkProps>(
     return (
       <>
         {isInternalLink ? (
-          <NextLink href={href} passHref>
+          <NextLink href={href} passHref prefetch={false}>
             <span
               className={cx(
                 "transition duration-200",
