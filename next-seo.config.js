@@ -23,12 +23,12 @@ const defaultSEOConfig = {
       {
         url:
           process.env.NEXT_PUBLIC_SEO_IMAGE_URL ||
-          "https://res.cloudinary.com/dvhl4ow8k/image/upload/v1711213800/nextjs-portfolio/seo/t8xm8gvkxca9squxkfgr.png",
+          "https://res.cloudinary.com/dvhl4ow8k/image/upload/f_auto,q_auto/v1/nextjs-portfolio/seo/t8xm8gvkxca9squxkfgr",
         width: 1200,
         height: 630,
         alt:
           process.env.NEXT_PUBLIC_SEO_IMAGE_ALT ||
-          "https://res.cloudinary.com/dvhl4ow8k/image/upload/v1711213800/nextjs-portfolio/seo/t8xm8gvkxca9squxkfgr.png",
+          "https://res.cloudinary.com/dvhl4ow8k/image/upload/f_auto,q_auto/v1/nextjs-portfolio/seo/t8xm8gvkxca9squxkfgr",
       },
     ],
     profile: {
