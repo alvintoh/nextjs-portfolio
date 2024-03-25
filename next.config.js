@@ -9,4 +9,7 @@ module.exports = withContentlayer({
       "cdn.hashnode.com",
     ],
   },
+  experimental: {
+    optimisticClientCache: false,
+  },
 });
